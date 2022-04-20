@@ -1,10 +1,14 @@
+import NewsCard from "../NewsCard";
+
 const NewsList = ({ articles }) => {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       {articles.map((article, index, arr) => (
-        <div key={index}>
-          <h1>{article.title}</h1>
-        </div>
+        <NewsCard
+          key={index}
+          article={article}
+          notLastChild={!(arr.length === index + 1)}
+        />
       ))}
     </div>
   );
