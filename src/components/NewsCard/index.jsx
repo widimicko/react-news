@@ -1,3 +1,5 @@
+import formatDate from "../../utils/formatDate";
+
 import "./style.css";
 
 const NewsCard = ({ article, notLastChild }) => {
@@ -13,7 +15,7 @@ const NewsCard = ({ article, notLastChild }) => {
         </div>
 
         <div className="newsCardContent">
-          <p className="newsCardDate">{publishedAt}</p>
+          <p className="newsCardDate">{formatDate(publishedAt)}</p>
           <p className="newsCardAuthor">{`${author} | ${source.name}`}</p>
           <p className="newsCardDesc">{description}</p>
           <a
