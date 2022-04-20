@@ -15,7 +15,7 @@ import CATEGORIES from "./constant/categories";
 
 function App() {
   const [articles, setArticles] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("technology");
+  const [selectedCategory, setSelectedCategory] = useState(CATEGORIES[0].slug);
 
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
