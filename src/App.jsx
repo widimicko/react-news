@@ -1,10 +1,15 @@
 import "./App.css";
+import Container from "./components/Container";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div>
-      <h1>Hello React</h1>
-    </div>
+    <>
+      <Navbar />
+      <Container>
+        <h1>Hello React</h1>
+      </Container>
+    </>
   );
 }
 
